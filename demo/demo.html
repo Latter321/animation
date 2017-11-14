@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>rabbit animation</title>
+	<style type="text/css">
+	#rabbit{
+		width: 102px;
+		height: 80px;
+	}
+	</style>
+</head>
+<body>
+	<div id="rabbit"></div>
+	<script type="text/javascript">
+	var el = document.getElementById('rabbit'),
+		positions = ["0 -854", "-174 -852", "-349 -852", "-524 -852", "-698 -851", "-873 -848"],
+		imgUrl = 'rabbit.png';
+
+	animation(el,positions,imgUrl);
+	function animation(el,positions,imgUrl){
+		el.style.backgroundImage = 'url(' + imgUrl + ')';
+		el.style.backgroundRepeat = 'no-repeat';
+		var index = 0;
+
+		function run(){
+			console.log(index);
+			var position = positions[index].split(' ');
+			el.style.backgroundPosition = position[0] + 'px ' + position[1] + 'px';
+			index++;
+			if(index >= positions.length){
+				index = 0;
+			}
+			setTimeout(run,80);
+		}	
+		run();		
+	}
+	</script>
+</body>
+</html>
