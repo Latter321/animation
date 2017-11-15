@@ -87,6 +87,7 @@ Timeline.prototype.restart = function(){
 
 	this.state = STATE_START;
 
+	// 无缝连接动画
 	startTimeline(this, +new Date() - this.dur);
 };
 
@@ -115,7 +116,7 @@ function startTimeline(timeline, startTime){
 			timeline.onenterframe(now - startTime);
 			lastTick = now;
 		}
-
 	}
-
 }
+
+module.exports = Timeline;
