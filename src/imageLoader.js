@@ -11,7 +11,7 @@ function loadImage(images,callback,timeout){
 	var count = 0;
 
 	//全部图片加载成功的一个标志
-	var success = true；
+	var success = true;
 
 	// 超时timer的id
 	var timeoutId = 0;
