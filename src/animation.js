@@ -1,4 +1,4 @@
-'use strict';
+﻿'use strict';
 
 var loadImage = require('./imageLoader');
 var Timeline = require('./Timeline');
@@ -106,7 +106,7 @@ Animation.prototype.changeSrc = function(el, imglist){
 			ele.src = imglist[index];
 			if(index === len -1){
 				next();
-			}			
+			}
 		}
 		type = TASK_ASYC;
 	}else{
@@ -156,7 +156,7 @@ Animation.prototype.repeat = function(times){
 };
 
 /**
-*无限重复上一次动画 
+*无限重复上一次动画
 */
 Animation.prototype.repeatForever = function(){
 	return this.repeat();
